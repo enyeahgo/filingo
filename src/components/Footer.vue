@@ -1,6 +1,6 @@
 <template>
-  <div class="flex h-screen items-center justify-center">
-    <p>FILINGO &copy; {{ year }}</p>
+  <div class="footerbox">
+    <span class="footertext">FILINGO &copy; {{ year }}</span>
   </div>
 </template>
 
@@ -20,8 +20,16 @@
 </script>
 
 <style scoped>
-#footercontainer {
+.footerbox {
   position: fixed;
   bottom: 0;
+  background: #0faf87;
+  height: 80px;
+  width: 100%;
+  padding: 20px;
+  z-index: 1;
+}
+.footertext {
+  font-family: Arvo;
 }
 </style>
