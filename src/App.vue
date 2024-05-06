@@ -31,13 +31,17 @@
   <div class="mt-2 lg:mt-4">
     <router-view/>
   </div>
+  
+  <Footer />
+  
 </template>
 
 <script>
+import Footer from './components/Footer.vue'
 
 export default {
   name: 'App',
-  components: { },
+  components: { Footer },
   methods: {
     showMenu() {
       this.$refs.menu.classList.toggle('hidden');
