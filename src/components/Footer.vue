@@ -1,6 +1,8 @@
 <template>
   <div class="footerbox">
     <span class="footertext">FILINGO &copy; {{ year }}</span>
+    <br />
+    <span class="text-xs">Enliven Technologies Philippines</span>
   </div>
 </template>
 

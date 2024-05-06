@@ -16,21 +16,19 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15" stroke="white" fill="white" class="hidden mr-1" ref="cross"><g id="_01_align_center" data-name="01 align left"><polygon points="24 1.414 22.586 0 12 10.586 1.414 0 0 1.414 10.586 12 0 22.586 1.414 24 12 13.414 22.586 24 24 22.586 13.414 12 24 1.414"/></g></svg>
     </button>
   </header>
-  <div class="hidden flex space-x-4" ref="menu" style="z-index: 2;">
-    <div class="fixed top-0 left-0 h-screen w-64 bg-gray-800 text-white shadow-lg overflow-y-auto">
-      <h2 class="title text-xl font-bold px-4 py-2">Filingo</h2>
-      <ul class="px-4 py-2">
-        <li><router-link to="/" class="hover:text-gray-400 block px-4 py-2" @click="showMenu">Home</router-link></li>
-        <li><router-link to="/about" class="hover:text-gray-400 block px-4 py-2" @click="showMenu">About</router-link></li>
-        <li><router-link to="/services" class="hover:text-gray-400 block px-4 py-2" @click="showMenu">Services</router-link></li>
-        <li><router-link to="/contact" class="hover:text-gray-400 block px-4 py-2" @click="showMenu">Contact</router-link></li>
-      </ul>
-    </div>
-    <div class="flex-grow px-4 py-4"></div>
+  
+  <div class="hidden fixed top-0 left-0 h-screen w-64 bg-gray-800 text-white shadow-lg overflow-y-auto" ref="menu">
+    <h2 class="title text-xl font-bold px-4 py-2">Filingo</h2>
+    <ul class="px-4 py-2">
+      <li><router-link to="/" class="hover:text-gray-400 block px-4 py-2" @click="showMenu">Home</router-link></li>
+      <li><router-link to="/about" class="hover:text-gray-400 block px-4 py-2" @click="showMenu">About</router-link></li>
+      <li><router-link to="/services" class="hover:text-gray-400 block px-4 py-2" @click="showMenu">Services</router-link></li>
+      <li><router-link to="/contact" class="hover:text-gray-400 block px-4 py-2" @click="showMenu">Contact</router-link></li>
+    </ul>
   </div>
-  <div class="mt-2 lg:mt-4">
-    <router-view/>
-  </div>
+  <div class="flex-grow px-4 py-4"></div>
+  
+  <router-view/>
   
   <Footer />
   
@@ -63,5 +61,8 @@ export default {
 .title {
   font-family: 'Briem Hand', Helvetica, Arial, sans-serif;
   font-size: 30px;
+}
+.sidebar {
+  background: rgba(0, 0, 0, 0.5);
 }
 </style>
