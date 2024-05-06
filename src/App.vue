@@ -28,11 +28,9 @@
     </div>
     <div class="flex-grow px-4 py-4"></div>
   </div>
-  
   <div class="mt-2 lg:mt-4">
     <router-view/>
   </div>
-  
 </template>
 
 <script>
