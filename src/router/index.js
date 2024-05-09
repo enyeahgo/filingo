@@ -21,6 +21,11 @@ const routes = [
     path: '/contact',
     name: 'contact',
     component: () => import('../views/ContactView.vue')
+  },
+  {
+    path: '/nav',
+    name: 'nav',
+    component: () => import('../views/Navtab.vue')
   }
 ]
 

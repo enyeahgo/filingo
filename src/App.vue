@@ -26,11 +26,9 @@
       <li><router-link to="/contact" class="hover:text-gray-400 block px-4 py-2" @click="showMenu">Contact</router-link></li>
     </ul>
   </div>
-  <div class="flex-grow px-4 py-4"></div>
+  <div class="flex-grow px-2 py-2"></div>
   
   <router-view/>
-  
-  <Navtab />
   
   <Footer />
   
@@ -38,11 +36,10 @@
 
 <script>
 import Footer from './components/Footer.vue'
-import Navtab from './components/Navtab.vue'
 
 export default {
   name: 'App',
-  components: { Footer, Navtab },
+  components: { Footer },
   methods: {
     showMenu() {
       this.$refs.menu.classList.toggle('hidden');
