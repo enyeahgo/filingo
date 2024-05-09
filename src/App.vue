@@ -30,16 +30,19 @@
   
   <router-view/>
   
+  <Navtab />
+  
   <Footer />
   
 </template>
 
 <script>
 import Footer from './components/Footer.vue'
+import Navtab from './components/Navtab.vue'
 
 export default {
   name: 'App',
-  components: { Footer },
+  components: { Footer, Navtab },
   methods: {
     showMenu() {
       this.$refs.menu.classList.toggle('hidden');
