@@ -9,14 +9,13 @@
           :class="{ 'bg-blue-100': isActive(navItem.name) }"
           @click="setActive(navItem.name)"
         >
-          <div class="d-flex">
-            <img src="../assets/starcoin.png" width="30px" height="30px" />
-            <span>{{ navItem.name }}</span>
+          <div class="flex justify-content-center" style="align-items: center;">
+            <img :src="getImage(navItem.icon)" width="30px" height="30px" />&nbsp;{{ navItem.name }}
           </div>
         </button>
       </nav>
-      <div v-for="tabItem in tabItems" :key="tabItem.name">
-        <div v-show="isActive(tabItem.name)" class="p-4 border rounded-md">
+      <div v-for="tabItem in tabItems" :key="tabItem.name" class="flex justify-center align-center">
+        <div v-show="isActive(tabItem.name)" class="p-4 w-full lg:w-1/2 border rounded-md">
           {{ tabItem.content }}
         </div>
       </div>
@@ -29,16 +28,16 @@ export default {
   data() {
     return {
       navItems: [
-        { name: 'Home', icon: '../assets/starcoin.png' },
-        { name: 'About', icon: '../assets/starcoin.png' },
-        { name: 'Contact', icon: '../assets/starcoin.png' },
+        { name: 'Points', icon: 'mangopoint.png' },
+        { name: 'Stars', icon: 'starcoin.png' },
+        { name: 'Credits', icon: 'pesocredit.png' },
       ],
       tabItems: [
-        { name: 'Home', content: 'Welcome to the Home tab!' },
-        { name: 'About', content: 'Learn more about us on the About tab.' },
-        { name: 'Contact', content: 'Get in touch with us on the Contact tab.' },
+        { name: 'Points', content: 'Welcome to the Home tab!' },
+        { name: 'Stars', content: 'Learn more about us on the About tab.' },
+        { name: 'Credits', content: 'Get in touch with us on the Contact tab.' },
       ],
-      active: 'About',
+      active: 'Points',
     };
   },
   methods: {
@@ -48,6 +47,9 @@ export default {
     isActive(name) {
       return this.active === name;
     },
+    getImage(img) {
+      return require(`../assets/${img}`);
+    }
   },
 };
 </script>
